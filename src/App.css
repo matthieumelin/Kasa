@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.header {
+  padding: 20px;
+}
+.header .header-banner {
+  background: url("../public/assets/images/header_background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+  margin: 10px 0 0 0;
+  border-radius: 10px;
+}
+.header .header-banner .header-banner-title {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  width: 300px;
+}
+
+.housing_card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar .navbar-logo {
+  display: block;
+  object-fit: contain;
+}
+.navbar .navbar-menu {
+  list-style-type: none;
+  margin: 0;
+}
+.navbar .navbar-menu .navbar-menu-item-link {
+  color: #FF6060;
+  text-transform: uppercase;
+}
+
+.main {
+  padding: 20px;
+}
+.main .housings .housing-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+
+/*# sourceMappingURL=App.css.map */

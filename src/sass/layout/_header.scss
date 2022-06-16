@@ -1,0 +1,19 @@
+.header {
+    padding: 20px;
+    .header-banner {
+        background: url("../public/assets/images/header_background.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 20px;
+        margin: 10px 0 0 0;
+        border-radius: 10px;
+        .header-banner-title {
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 500;
+            width: 300px;
+        }
+    }
+}

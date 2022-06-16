@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar-logo {
+        display: block;
+        object-fit: contain;
+    }
+    .navbar-menu {
+        list-style-type: none;
+        margin: 0;
+        .navbar-menu-item-link {
+            color: #FF6060;
+            text-transform: uppercase;
+        }
+    }
+}
