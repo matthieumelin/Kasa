@@ -1,26 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .header {
-  padding: 20px;
+  padding: 20px 20px 0 20px;
 }
-.header .header-banner {
-  background: url("../public/assets/images/header_background.png");
+.header-banner {
+  background: linear-gradient(0deg, rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3)), url("../public/assets/images/header_background.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 20px;
-  margin: 10px 0 0 0;
+  padding: 30px 20px;
+  margin: 20px 0 0 0;
   border-radius: 10px;
 }
-.header .header-banner .header-banner-title {
+.header-banner-title {
   color: #fff;
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
   font-weight: 500;
-  width: 300px;
+  line-height: 24px;
+  font-size: 1.5rem;
+  width: 220px;
 }
 
-.housing_card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+.housings {
+  display: grid;
+  gap: 20px;
+}
+.housings .housing-card {
+  height: 255px;
+  border-radius: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+.housings .housing-card-title {
+  color: #fff;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 142.6%;
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
 }
 
 .navbar {
@@ -28,26 +50,105 @@
   justify-content: space-between;
   align-items: center;
 }
-.navbar .navbar-logo {
+.navbar-logo {
   display: block;
   object-fit: contain;
 }
-.navbar .navbar-menu {
+.navbar-menu {
   list-style-type: none;
   margin: 0;
 }
-.navbar .navbar-menu .navbar-menu-item-link {
+.navbar-menu-item-link {
   color: #FF6060;
   text-transform: uppercase;
+  margin: 0 0 0 20px;
+  font-size: 0.75rem;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+.navbar-menu-item-link[data-active=true] {
+  text-decoration: underline;
+}
+
+.footer {
+  background: #000;
+  height: 200px;
+  position: relative;
+}
+.footer-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.footer-content-logo {
+  display: block;
+  margin: 0 auto;
+}
+.footer-content-copyright {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-align: center;
+  margin: 30px 0 0 0;
 }
 
 .main {
   padding: 20px;
 }
-.main .housings .housing-card {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+
+.not-found {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.not-found-title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 5rem;
+  color: #FF6060;
+  text-align: center;
+  margin: 0;
+}
+.not-found-description {
+  color: #FF6060;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+.not-found-link {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 142.6%;
+  display: flex;
+  align-items: flex-end;
+  color: #FF6060;
+}
+
+.about {
+  margin: 20px;
+}
+.about-item-header {
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FF6060;
+  border-radius: 5px;
+}
+.about-item-header-title {
+  color: #fff;
+  font-size: 13px;
+  font-family: "Montserrat", sans-serif;
+}
+.about-item-header-icon {
+  color: #fff;
 }
 
 /*# sourceMappingURL=App.css.map */

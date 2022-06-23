@@ -1,0 +1,21 @@
+.about {
+    margin: 20px;
+    &-item {
+        &-header {
+            padding: 5px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #FF6060;
+            border-radius: 5px;
+            &-title {
+                color: #fff;
+                font-size: 13px;
+                font-family: "Montserrat", sans-serif;
+            }
+            &-icon {
+                color: #fff;
+            }
+        }
+    }
+}

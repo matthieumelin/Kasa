@@ -1,19 +1,20 @@
 .header {
-    padding: 20px;
-    .header-banner {
-        background: url("../public/assets/images/header_background.png");
+    padding: 20px 20px 0 20px;
+    &-banner {
+        background: linear-gradient(0deg, rgba(51, 51, 51, 0.3), rgba(51, 51, 51, 0.3)), url("../public/assets/images/header_background.png");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        padding: 20px;
-        margin: 10px 0 0 0;
+        padding: 30px 20px;
+        margin: 20px 0 0 0;
         border-radius: 10px;
-        .header-banner-title {
+        &-title {
             color: #fff;
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1.5rem;
+            font-family: "Montserrat", sans-serif;
             font-weight: 500;
-            width: 300px;
+            line-height: 24px;
+            font-size: 1.5rem;
+            width: 220px;
         }
     }
 }

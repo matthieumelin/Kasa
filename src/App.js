@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 // router dom
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+// housings
+import housings from "./housings.json";
 
 // pages
 import HomePage from "./pages/HomePage";
@@ -18,9 +21,12 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={<HomePage />} />
-        <Route path={MainRoutes.Housing} element={<HousingPage />} />
-        <Route path={MainRoutes.About} element={<AboutPage />} /> 
+        <Route index element={<HomePage housings={housings} />} />
+        <Route
+          path={MainRoutes.Housing}
+          element={<HousingPage housings={housings} />}
+        />
+        <Route path={MainRoutes.About} element={<AboutPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

@@ -18,16 +18,16 @@ export default function Header() {
         />
         <ul className="navbar-menu">
           <li className="navbar-menu-item">
-            <Link to="/" className="navbar-menu-item-link">
+            <Link data-active="true" to="/" className="navbar-menu-item-link active">
               Accueil
             </Link>
-            <Link to="/a-propos" className="navbar-menu-item-link">
+            <Link data-active="false" to="/a-propos" className="navbar-menu-item-link">
               A propos
             </Link>
           </li>
         </ul>
       </nav>
-      {currentLocation.pathname == Routes.Home ? (
+      {currentLocation.pathname === Routes.Home ? (
         <div className="header-banner">
           <div className="header-banner-title">
             Chez vous, partout et ailleurs

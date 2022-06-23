@@ -41,7 +41,7 @@ export default function AboutPage() {
             <div key={key} className="about-item">
               <div className="about-item-header">
                 <div className="about-item-header-title">{item.title}</div>
-                <i class="fa-solid fa-angle-down about-item-header-icon"></i>
+                <i className="fa-solid fa-angle-down about-item-header-icon"></i>
               </div>
               {item.collapse ? (
                 <div className="about-item-body">

@@ -1,9 +1,12 @@
 // layout
 @use 'layout/header';
-@use 'layout/housing';
+@use 'layout/housings';
 @use 'layout/navigation';
+@use 'layout/footer';
 // pages
 @use 'pages/home';
+@use 'pages/notfound';
+@use 'pages/about';
 // utils
 @use 'sass-utils/variables.scss';
 // fonts

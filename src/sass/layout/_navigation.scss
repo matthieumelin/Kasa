@@ -2,18 +2,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    .navbar-logo {
+    &-logo {
         display: block;
         object-fit: contain;
     }
-    .navbar-menu {
+    &-menu {
         list-style-type: none;
         margin: 0;
-        .navbar-menu-item-link {
+        &-item-link {
             color: #FF6060;
             text-transform: uppercase;
+            margin: 0 0 0 20px;
+            font-size: 0.75rem;
             font-weight: 500;
             font-family: "Montserrat", sans-serif;
+            text-decoration: none;
+            &[data-active=true] {
+                text-decoration: underline;
+            }
         }
     }
 }

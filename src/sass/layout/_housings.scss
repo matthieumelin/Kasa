@@ -1,0 +1,24 @@
+.housings {
+    display: grid;
+    gap: 20px;
+    .housing-card {
+        height: 255px;
+        border-radius: 10px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+        &-title {
+            color: #fff;
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 142.6%;
+            display: flex;
+            align-items: flex-end;
+            position: absolute;
+            left: 20px;
+            bottom: 20px;
+        }
+    }
+}
