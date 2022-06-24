@@ -2,12 +2,10 @@ import React from 'react'
 
 // react router
 import { Link } from "react-router-dom";
+import Routes from '../Routes';
 
 // components
 import Header from '../components/Header'
-
-// routes
-import Routes from '../Routes';
 
 export default function NotFoundPage() {
   return (

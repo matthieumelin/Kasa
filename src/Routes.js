@@ -1,5 +1,6 @@
 export default {
     Home: "/",
     About: "/a-propos",
-    Housing: "/logement"
+    Housing: "/logement",
+    NotFound: "/404"
 }

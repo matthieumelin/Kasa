@@ -1,0 +1,22 @@
+.housing-gallery {
+    position: relative;
+    &-arrow {
+        color: #fff;
+        position: absolute;
+        top: 50%;
+        font-size: 1.5rem;
+        &:first-child {
+            left: 5px;
+        }
+        &:nth-child(2) {
+            right: 5px;
+        }
+    }
+    &-picture {
+        display: block;
+        width: 335px;
+        height: 255px;
+        border-radius: 10px;
+        object-fit: cover;
+    }
+}

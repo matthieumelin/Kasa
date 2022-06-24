@@ -1,0 +1,74 @@
+.housing {
+  margin: 20px;
+  &-name {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 1.125rem;
+    color: #ff6060;
+  }
+  &-location {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #ff6060;
+  }
+  &-tags {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(2, 1fr);
+    &-tag {
+      padding: 0px 20px;
+      border-radius: 5px;
+      background: #ff6060;
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+      font-size: 0.875rem;
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    margin: 20px 0;
+    &-feedback {
+      display: flex;
+    }
+  }
+  &-item {
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 10px;
+      background: #ff6060;
+      border-radius: 5px;
+      &-title {
+        color: #fff;
+        font-family: "Monserrat", sans-serif;
+      }
+      &-icon  {
+        color: #fff;
+      }
+    }
+    &-body {
+      background: #f6f6f6;
+      &-description {
+        margin: 0;
+        padding: 20px 10px;
+        border-radius: 0 0 5px 5px;
+        color: #ff6060;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+      }
+      &-menu {
+        list-style: none;
+        padding: 20px 10px;
+        margin: 0;
+        &-item {
+          color: #ff6060;
+          font-family: "Montserrat", sans-serif;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

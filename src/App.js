@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 // router dom
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // housings
 import housings from "./housings.json";
@@ -23,7 +23,7 @@ export default function App() {
       <Routes>
         <Route index element={<HomePage housings={housings} />} />
         <Route
-          path={MainRoutes.Housing}
+          path={`${MainRoutes.Housing}/:id`}
           element={<HousingPage housings={housings} />}
         />
         <Route path={MainRoutes.About} element={<AboutPage />} />

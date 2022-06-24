@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .header {
   padding: 20px 20px 0 20px;
@@ -18,6 +19,29 @@
   line-height: 24px;
   font-size: 1.5rem;
   width: 220px;
+}
+
+.housing-gallery {
+  position: relative;
+}
+.housing-gallery-arrow {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  font-size: 1.5rem;
+}
+.housing-gallery-arrow:first-child {
+  left: 5px;
+}
+.housing-gallery-arrow:nth-child(2) {
+  right: 5px;
+}
+.housing-gallery-picture {
+  display: block;
+  width: 335px;
+  height: 255px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .housings {
@@ -53,6 +77,7 @@
 .navbar-logo {
   display: block;
   object-fit: contain;
+  width: 100px;
 }
 .navbar-menu {
   list-style-type: none;
@@ -149,6 +174,79 @@
 }
 .about-item-header-icon {
   color: #fff;
+}
+
+.housing {
+  margin: 20px;
+}
+.housing-name {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.125rem;
+  color: #ff6060;
+}
+.housing-location {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: #ff6060;
+}
+.housing-tags {
+  display: grid;
+  gap: 5px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.housing-tags-tag {
+  padding: 0px 20px;
+  border-radius: 5px;
+  background: #ff6060;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  text-align: center;
+  white-space: nowrap;
+}
+.housing-wrapper {
+  display: flex;
+  margin: 20px 0;
+}
+.housing-wrapper-feedback {
+  display: flex;
+}
+.housing-item-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  background: #ff6060;
+  border-radius: 5px;
+}
+.housing-item-header-title {
+  color: #fff;
+  font-family: "Monserrat", sans-serif;
+}
+.housing-item-header-icon  {
+  color: #fff;
+}
+.housing-item-body {
+  background: #f6f6f6;
+}
+.housing-item-body-description {
+  margin: 0;
+  padding: 20px 10px;
+  border-radius: 0 0 5px 5px;
+  color: #ff6060;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.housing-item-body-menu {
+  list-style: none;
+  padding: 20px 10px;
+  margin: 0;
+}
+.housing-item-body-menu-item {
+  color: #ff6060;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 /*# sourceMappingURL=App.css.map */

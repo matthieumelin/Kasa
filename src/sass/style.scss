@@ -1,5 +1,6 @@
 // layout
 @use 'layout/header';
+@use 'layout/housing-gallery';
 @use 'layout/housings';
 @use 'layout/navigation';
 @use 'layout/footer';
@@ -7,6 +8,7 @@
 @use 'pages/home';
 @use 'pages/notfound';
 @use 'pages/about';
+@use 'pages/housing';
 // utils
 @use 'sass-utils/variables.scss';
 // fonts
