@@ -91,6 +91,7 @@
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
+  outline: none;
 }
 .navbar-menu-item-link[data-active=true] {
   text-decoration: underline;

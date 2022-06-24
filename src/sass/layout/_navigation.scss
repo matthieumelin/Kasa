@@ -18,6 +18,7 @@
             font-weight: 500;
             font-family: "Montserrat", sans-serif;
             text-decoration: none;
+            outline: none;
             &[data-active=true] {
                 text-decoration: underline;
             }
