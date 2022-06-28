@@ -35,25 +35,27 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <section className="about">
-        {cards.map((item, key) => {
-          return (
-            <div key={key} className="about-item">
-              <div className="about-item-header">
-                <div className="about-item-header-title">{item.title}</div>
-                <i className="fa-solid fa-angle-down about-item-header-icon"></i>
-              </div>
-              {item.collapse ? (
-                <div className="about-item-body">
-                  <p className="about-item-body-description">
-                    {item.description}
-                  </p>
+      <main className="main-about">
+        <section className="about">
+          {cards.map((item, key) => {
+            return (
+              <div key={key} className="about-item">
+                <div className="about-item-header">
+                  <div className="about-item-header-title">{item.title}</div>
+                  <i className="fa-solid fa-angle-down about-item-header-icon"></i>
                 </div>
-              ) : null}
-            </div>
-          );
-        })}
-      </section>
+                {item.collapse ? (
+                  <div className="about-item-body">
+                    <p className="about-item-body-description">
+                      {item.description}
+                    </p>
+                  </div>
+                ) : null}
+              </div>
+            );
+          })}
+        </section>
+      </main>
       <Footer />
     </>
   );

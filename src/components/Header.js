@@ -7,18 +7,18 @@ import { Link, useLocation } from "react-router-dom";
 import Routes from "../Routes";
 
 export default function Header() {
-  const currentLocation = useLocation();
+  const location = useLocation();
   return (
     <header className="header">
       <nav className="navbar">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/images/logo_red.png`}
+          src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
           alt="Logo de Kasa"
           className="navbar-logo"
         />
         <ul className="navbar-menu">
           <li className="navbar-menu-item">
-            <Link data-active="true" to="/" className="navbar-menu-item-link active">
+            <Link data-active={``} to="/" className="navbar-menu-item-link active">
               Accueil
             </Link>
             <Link data-active="false" to="/a-propos" className="navbar-menu-item-link">
@@ -27,7 +27,7 @@ export default function Header() {
           </li>
         </ul>
       </nav>
-      {currentLocation.pathname === Routes.Home ? (
+      {location.pathname === Routes.Home ? (
         <div className="header-banner">
           <div className="header-banner-title">
             Chez vous, partout et ailleurs

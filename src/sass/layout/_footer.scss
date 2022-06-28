@@ -1,8 +1,10 @@
 .footer {
     background: #000;
-    height: 200px;
+    height: 210px;
     position: relative;
+    margin-top: auto;
     &-content {
+        width: 100%;
         position: absolute;
         left: 50%;
         top: 50%;

@@ -11,9 +11,7 @@ export default function Housings({ housings }) {
       {housings.map((housing) => {
         return (
           <Link to={`${Routes.Housing}/${housing.id}`} key={housing.id} style={{
-            background: `linear-gradient(
-                to bottom,
-                rgba(255,96,96,0.5), rgba(189,72,72,0.5)), url(${housing.cover})`
+            background: `url(${housing.cover})`
           }} className="housing-card">
             <div className="housing-card-title">{housing.title}</div>
           </Link>

@@ -1,74 +1,111 @@
 .housing {
-  margin: 20px;
-  &-name {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 1.125rem;
-    color: #ff6060;
-  }
-  &-location {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 500;
-    font-size: 0.875rem;
-    color: #ff6060;
-  }
-  &-tags {
-    display: grid;
-    gap: 5px;
-    grid-template-columns: repeat(2, 1fr);
-    &-tag {
-      padding: 0px 20px;
-      border-radius: 5px;
-      background: #ff6060;
-      color: #fff;
-      font-family: "Montserrat", sans-serif;
-      font-size: 0.875rem;
-      text-align: center;
-      white-space: nowrap;
-    }
-  }
-  &-wrapper {
-    display: flex;
-    margin: 20px 0;
-    &-feedback {
-      display: flex;
-    }
-  }
-  &-item {
-    &-header {
-      display: flex;
-      justify-content: space-between;
-      padding: 5px 10px;
-      background: #ff6060;
-      border-radius: 5px;
-      &-title {
-        color: #fff;
-        font-family: "Monserrat", sans-serif;
-      }
-      &-icon  {
-        color: #fff;
-      }
-    }
-    &-body {
-      background: #f6f6f6;
-      &-description {
-        margin: 0;
-        padding: 20px 10px;
-        border-radius: 0 0 5px 5px;
-        color: #ff6060;
+    &-name {
         font-family: "Montserrat", sans-serif;
-        font-weight: 400;
-      }
-      &-menu {
-        list-style: none;
-        padding: 20px 10px;
-        margin: 0;
-        &-item {
-          color: #ff6060;
-          font-family: "Montserrat", sans-serif;
-          font-weight: 400;
-        }
-      }
+        font-weight: 500;
+        font-size: 1.125rem;
+        color: #ff6060;
+        margin: 10px 0 0 0;
     }
-  }
+    &-location {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: #ff6060;
+        margin: 10px 0;
+    }
+    &-tags {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+        &-tag {
+            padding: 3px 20px;
+            border-radius: 5px;
+            background: #ff6060;
+            color: #fff;
+            font-family: "Montserrat", sans-serif;
+            font-size: 0.8rem;
+            text-align: center;
+            white-space: nowrap;
+        }
+    }
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        &-feedback {
+            display: flex;
+            &-star {
+                margin: 0 5px 0 0;
+                color: #E3E3E3;
+            }
+            &-star-on {
+                margin: 0 5px 0 0;
+                color: #ff6060;
+            }
+        }
+        &-profile {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            &-name {
+                color: #ff6060;
+                font-family: "Montserrat", sans-serif;
+                font-size: 0.75rem;
+                font-weight: 500;
+                text-align: right;
+            }
+            &-picture {
+                border-radius: 100px;
+                width: 32px;
+                height: 32px;
+                margin: 0 0 0 10px;
+            }
+        }
+    }
+    &-items {
+        display: grid;
+        gap: 20px;
+        &-item {
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                padding: 5px 10px;
+                background: #ff6060;
+                border-radius: 5px;
+                z-index: 999;
+                &-title {
+                    color: #fff;
+                    font-family: "Monserrat", sans-serif;
+                    font-weight: 500;
+                    font-size: 0.8125rem;
+                }
+                &-icon {
+                    color: #fff;
+                }
+            }
+            &-body {
+                background: #f6f6f6;
+                border-radius: 0 0 5px 5px;
+                &-description {
+                    margin: 0;
+                    padding: 20px 10px;
+                    border-radius: 0 0 5px 5px;
+                    color: #ff6060;
+                    font-family: "Montserrat", sans-serif;
+                    font-weight: 400;
+                }
+                &-menu {
+                    list-style: none;
+                    padding: 20px 10px;
+                    margin: 0;
+                    &-item {
+                        color: #ff6060;
+                        font-family: "Montserrat", sans-serif;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
 }

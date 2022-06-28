@@ -17,6 +17,7 @@ export default function HousingGallery({ pictures }) {
       setCurrentIndex(0);
     }
   };
+  
   return (
     <div className="housing-gallery">
       {pictures.length > 1 ? (
