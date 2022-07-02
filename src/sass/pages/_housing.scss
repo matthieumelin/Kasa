@@ -1,111 +1,176 @@
-.housing {
-    &-name {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 1.125rem;
-        color: #ff6060;
-        margin: 10px 0 0 0;
-    }
-    &-location {
-        font-family: "Montserrat", sans-serif;
-        font-weight: 500;
-        font-size: 0.875rem;
-        color: #ff6060;
-        margin: 10px 0;
-    }
-    &-tags {
-        display: grid;
-        gap: 10px;
-        grid-template-columns: repeat(2, 1fr);
-        &-tag {
-            padding: 3px 20px;
-            border-radius: 5px;
-            background: #ff6060;
-            color: #fff;
+    .housing {
+        &-wrapper {
+            position: relative;
+        }
+        &-name {
             font-family: "Montserrat", sans-serif;
-            font-size: 0.8rem;
-            text-align: center;
-            white-space: nowrap;
-        }
-    }
-    &-wrapper {
-        display: flex;
-        align-items: center;
-        margin: 20px 0;
-        &-feedback {
-            display: flex;
-            &-star {
-                margin: 0 5px 0 0;
-                color: #E3E3E3;
-            }
-            &-star-on {
-                margin: 0 5px 0 0;
-                color: #ff6060;
+            font-weight: 500;
+            font-size: 1.125rem;
+            color: #ff6060;
+            margin: 10px 0 0 0;
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+                margin: 30px 0 0 0;
             }
         }
-        &-profile {
-            width: 100%;
+        &-location {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 0.875rem;
+            color: #ff6060;
+            margin: 10px 0;
+            @media screen and (min-width: 1024px) {
+                font-size: 1.125rem;
+            }
+        }
+        &-tags {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+            @media screen and (min-width: 1024px) {
+                margin: 20px 0 0 0;
+                grid-template-columns: repeat(3, max-content);
+            }
+            &-tag {
+                padding: 3px 20px;
+                border-radius: 5px;
+                background: #ff6060;
+                color: #fff;
+                font-family: "Montserrat", sans-serif;
+                font-size: 0.625rem;
+                text-align: center;
+                white-space: nowrap;
+                @media screen and (min-width: 1024px) {
+                    font-size: 0.875rem;
+                    border-radius: 10px;
+                }
+            }
+        }
+        &-inline {
             display: flex;
             align-items: center;
-            justify-content: flex-end;
-            &-name {
-                color: #ff6060;
-                font-family: "Montserrat", sans-serif;
-                font-size: 0.75rem;
-                font-weight: 500;
-                text-align: right;
+            margin: 20px 0;
+            @media screen and (min-width: 1024px) {
+                width: 30%;
+                margin: auto 0 0 auto;
+                flex-direction: column-reverse;
+                align-items: flex-end;
+                position: absolute;
+                top: 0;
+                right: 0;
             }
-            &-picture {
-                border-radius: 100px;
-                width: 32px;
-                height: 32px;
-                margin: 0 0 0 10px;
-            }
-        }
-    }
-    &-items {
-        display: grid;
-        gap: 20px;
-        &-item {
-            &-header {
+            &-feedback {
                 display: flex;
-                justify-content: space-between;
-                padding: 5px 10px;
-                background: #ff6060;
-                border-radius: 5px;
-                z-index: 999;
-                &-title {
-                    color: #fff;
-                    font-family: "Monserrat", sans-serif;
-                    font-weight: 500;
-                    font-size: 0.8125rem;
+                @media screen and (min-width: 1024px) {
+                    margin: 20px 0 0 0;
                 }
-                &-icon {
-                    color: #fff;
+                &-star {
+                    margin: 0 5px 0 0;
+                    color: #E3E3E3;
+                    @media screen and (min-width: 1024px) {
+                        font-size: 1.5rem;
+                    }
+                }
+                &-star-on {
+                    margin: 0 5px 0 0;
+                    color: #ff6060;
+                    @media screen and (min-width: 1024px) {
+                        font-size: 1.5rem;
+                    }
                 }
             }
-            &-body {
-                background: #f6f6f6;
-                border-radius: 0 0 5px 5px;
-                &-description {
-                    margin: 0;
-                    padding: 20px 10px;
-                    border-radius: 0 0 5px 5px;
+            &-profile {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                &-name {
                     color: #ff6060;
                     font-family: "Montserrat", sans-serif;
-                    font-weight: 400;
+                    font-size: 0.75rem;
+                    font-weight: 500;
+                    text-align: right;
+                    @media screen and (min-width: 1024px) {
+                        font-size: 1.125rem;
+                    }
                 }
-                &-menu {
-                    list-style: none;
-                    padding: 20px 10px;
-                    margin: 0;
-                    &-item {
+                &-picture {
+                    border-radius: 100px;
+                    width: 32px;
+                    height: 32px;
+                    margin: 0 0 0 10px;
+                    @media screen and (min-width: 1024px) {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+            }
+        }
+        &-items {
+            display: grid;
+            gap: 20px;
+            @media screen and (min-width: 1024px) {
+                grid-template-columns: repeat(2, 1fr);
+                margin: 30px 0 30px 0;
+            }
+            &-item {
+                &-header {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+                    background: #ff6060;
+                    border-radius: 5px;
+                    z-index: 999;
+                    cursor: pointer;
+                    &-title {
+                        color: #fff;
+                        font-family: "Montserrat", sans-serif;
+                        font-size: 0.8125rem;
+                        @media screen and (min-width: 1024px) {
+                            font-size: 1.125rem;
+                        }
+                    }
+                    &-icon {
+                        color: #fff;
+                    }
+                }
+                &-body {
+                    background: #f6f6f6;
+                    border-radius: 0 0 5px 5px;
+                    @media screen and (min-width: 1024px) {
+                        height: calc(100% - 35px);
+                    }
+                    &-description {
+                        margin: 0;
+                        padding: 20px 10px;
+                        border-radius: 0 0 5px 5px;
                         color: #ff6060;
                         font-family: "Montserrat", sans-serif;
                         font-weight: 400;
+                        font-size: 0.75rem;
+                        @media screen and (min-width: 1024px) {
+                            font-size: 1.125rem;
+                            padding: 20px;
+                        }
+                    }
+                    &-menu {
+                        list-style: none;
+                        padding: 20px 10px;
+                        margin: 0;
+                        @media screen and (min-width: 1024px) {
+                            padding: 20px;
+                        }
+                        &-item {
+                            color: #ff6060;
+                            font-family: "Montserrat", sans-serif;
+                            font-weight: 400;
+                            font-size: 0.75rem;
+                            @media screen and (min-width: 1024px) {
+                                font-size: 1.125rem;
+                            }
+                        }
                     }
                 }
             }
         }
     }
-}

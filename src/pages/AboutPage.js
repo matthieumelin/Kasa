@@ -17,7 +17,7 @@ export default function AboutPage() {
       title: "Respect",
       description:
         "La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.",
-      collapse: true,
+      collapse: false,
     },
     {
       title: "Service",
@@ -32,30 +32,48 @@ export default function AboutPage() {
       collapse: false,
     },
   ]);
+
+  const toggleCard = (index, card) => {
+    let tempState = [...cards];
+    let tempElement = { ...cards[index] };
+    tempElement.collapse = !card.collapse;
+    tempState[index] = tempElement;
+    setCards(tempState);
+  };
+
   return (
     <>
-      <Header />
-      <main className="main-about">
-        <section className="about">
-          {cards.map((item, key) => {
-            return (
-              <div key={key} className="about-item">
-                <div className="about-item-header">
-                  <div className="about-item-header-title">{item.title}</div>
-                  <i className="fa-solid fa-angle-down about-item-header-icon"></i>
-                </div>
-                {item.collapse ? (
-                  <div className="about-item-body">
-                    <p className="about-item-body-description">
-                      {item.description}
-                    </p>
+      <div className="page-responsive">
+        <Header />
+        <main className="main">
+          <section className="about">
+            {cards.map((item, key) => {
+              return (
+                <div key={key} className="about-item">
+                  <div
+                    className="about-item-header"
+                    onClick={() => toggleCard(key, item)}
+                  >
+                    <div className="about-item-header-title">{item.title}</div>
+                    <i
+                      className={`fa-solid ${
+                        !item.collapse ? "fa-angle-down" : "fa-angle-up"
+                      } about-item-header-icon`}
+                    ></i>
                   </div>
-                ) : null}
-              </div>
-            );
-          })}
-        </section>
-      </main>
+                  {item.collapse ? (
+                    <div className="about-item-body">
+                      <p className="about-item-body-description">
+                        {item.description}
+                      </p>
+                    </div>
+                  ) : null}
+                </div>
+              );
+            })}
+          </section>
+        </main>
+      </div>
       <Footer />
     </>
   );

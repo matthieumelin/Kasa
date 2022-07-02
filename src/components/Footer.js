@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-content">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/images/logo_white.png`}
+          src={`${process.env.PUBLIC_URL}/assets/images/logo_white.svg`}
           alt="Logo de Kasa"
           className="footer-content-logo"
         />

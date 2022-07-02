@@ -33,6 +33,7 @@ export default function HousingGallery({ pictures }) {
         </>
       ) : null}
       <img src={pictures[currentIndex]} className="housing-gallery-picture" />
+      <div className="housing-gallery-count">{currentIndex+1}/{pictures.length}</div>
     </div>
   );
 }

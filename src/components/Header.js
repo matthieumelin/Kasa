@@ -12,16 +12,30 @@ export default function Header() {
     <header className="header">
       <nav className="navbar">
         <img
-          src={`${process.env.PUBLIC_URL}/assets/images/logo.svg`}
+          src={`${process.env.PUBLIC_URL}/assets/images/logo_red.svg`}
           alt="Logo de Kasa"
           className="navbar-logo"
         />
         <ul className="navbar-menu">
           <li className="navbar-menu-item">
-            <Link data-active={``} to="/" className="navbar-menu-item-link active">
+            <Link
+              data-active={
+                location.pathname === Routes.Home ||
+                location.pathname === Routes.NotFound ||
+                location.pathname.includes(Routes.Housing)
+                  ? "true"
+                  : null
+              }
+              to={Routes.Home}
+              className="navbar-menu-item-link"
+            >
               Accueil
             </Link>
-            <Link data-active="false" to="/a-propos" className="navbar-menu-item-link">
+            <Link
+              data-active={location.pathname === Routes.About ? "true" : null}
+              to={Routes.About}
+              className="navbar-menu-item-link"
+            >
               A propos
             </Link>
           </li>
@@ -33,6 +47,8 @@ export default function Header() {
             Chez vous, partout et ailleurs
           </div>
         </div>
+      ) : location.pathname === Routes.About ? (
+        <div className="header-about-banner"></div>
       ) : null}
     </header>
   );

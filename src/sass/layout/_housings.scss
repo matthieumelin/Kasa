@@ -1,6 +1,14 @@
 .housings {
     display: grid;
     gap: 20px;
+    @media screen and (min-width: 1024px) {
+        gap: 50px;
+        background: #F6F6F6;
+        padding: 50px;
+        border-radius: 25px;
+        margin: 30px 0;
+        grid-template-columns: repeat(3, 1fr);
+    }
     .housing-card {
         height: 255px;
         border-radius: 10px;
@@ -8,6 +16,9 @@
         background-repeat: no-repeat;
         background-position: center;
         position: relative;
+        @media screen and (min-width: 1024px) {
+            height: 340px;
+        }
         &-title {
             color: #fff;
             font-family: 'Montserrat';
