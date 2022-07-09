@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 // router
 import { useParams, Navigate } from "react-router-dom";
@@ -8,14 +8,11 @@ import Routes from "../Routes";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import HousingGallery from "../components/HousingGallery";
+import Collapse from "../components/Collapse";
 
 export default function HousingPage({ housings }) {
   const { id } = useParams();
-  const [collapses, setCollapses] = useState({
-    description: false,
-    equipments: false,
-  });
-  const housing = housings.filter((item) => item.id === id)[0];
+  const housing = housings.find((item) => item.id === id);
 
   if (!housing) {
     return <Navigate to={Routes.NotFound} />;
@@ -71,69 +68,16 @@ export default function HousingPage({ housings }) {
               </div>
             </div>
             <div className="housing-items">
-              <div className="housing-items-item">
-                <div
-                  className="housing-items-item-header"
-                  onClick={() =>
-                    setCollapses({
-                      ...collapses,
-                      description: !collapses.description,
-                    })
-                  }
-                >
-                  <div className="housing-items-item-header-title">
-                    Description
-                  </div>
-                  <i
-                    className={`fa-solid ${
-                      !collapses.description ? "fa-angle-down" : "fa-angle-up"
-                    } housing-items-item-header-icon`}
-                  ></i>
-                </div>
-                {collapses.description ? (
-                  <div className="housing-items-item-body">
-                    <p className="housing-items-item-body-description">
-                      {housing.description}
-                    </p>
-                  </div>
-                ) : null}
-              </div>
-              <div className="housing-items-item">
-                <div
-                  className="housing-items-item-header"
-                  onClick={() =>
-                    setCollapses({
-                      ...collapses,
-                      equipments: !collapses.equipments,
-                    })
-                  }
-                >
-                  <div className="housing-items-item-header-title">
-                    Équipements
-                  </div>
-                  <i
-                    className={`fa-solid ${
-                      !collapses.equipments ? "fa-angle-down" : "fa-angle-up"
-                    } housing-items-item-header-icon`}
-                  ></i>
-                </div>
-                {collapses.equipments ? (
-                  <div className="housing-items-item-body">
-                    <ul className="housing-items-item-body-menu">
-                      {housing.equipments.map((item, key) => {
-                        return (
-                          <li
-                            key={key}
-                            className="housing-items-item-body-menu-item"
-                          >
-                            {item}
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </div>
-                ) : null}
-              </div>
+              <Collapse
+                title="Description"
+                type="Description"
+                housing={housing}
+              />
+              <Collapse
+                title="Équipements"
+                type="Equipements"
+                housing={housing}
+              />
             </div>
           </div>
         </main>

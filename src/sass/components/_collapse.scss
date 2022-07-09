@@ -1,0 +1,63 @@
+.collapse {
+    @media screen and (min-width: 1024px) {
+        width: 100%;
+        margin: 0 auto;
+    }
+    &-header {
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: #FF6060;
+        border-radius: 5px;
+        cursor: pointer;
+        &-title {
+            color: #fff;
+            font-size: 0.813rem;
+            font-family: "Montserrat", sans-serif;
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+            }
+        }
+        &-icon {
+            color: #fff;
+            @media screen and (min-width: 1024px) {
+                font-size: 1.5rem;
+                margin: 0 20px 0 0;
+            }
+        }
+    }
+    &-body {
+        background: #f6f6f6;
+        border-radius: 0 0 5px 5px;
+        &-description {
+            margin: 0;
+            padding: 20px 10px;
+            border-radius: 0 0 5px 5px;
+            color: #ff6060;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 400;
+            font-size: 0.75rem;
+            @media screen and (min-width: 1024px) {
+                font-size: 1.125rem;
+            }
+        }
+        &-menu {
+            list-style: none;
+            padding: 20px 10px;
+            margin: 0;
+            @media screen and (min-width: 1024px) {
+                padding: 20px;
+            }
+            &-item {
+                color: #ff6060;
+                font-family: "Montserrat", sans-serif;
+                font-weight: 400;
+                font-size: 0.75rem;
+                @media screen and (min-width: 1024px) {
+                    font-size: 1.125rem;
+                }
+            }
+        }
+    }
+}
